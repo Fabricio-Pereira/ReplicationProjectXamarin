@@ -1,2 +1,2 @@
 # ReplicationProjectXamarin
-Lista de PProjetos Replicados em Xamarin
+Lista de Projetos Replicados em Xamarin
