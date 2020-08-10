@@ -1,0 +1,8 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/ReplicationProject/ReplicationProject/obj
+/ReplicationProject/ReplicationProject.Android/obj
+/ReplicationProject/ReplicationProject.iOS/obj
+/.vs

@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ReplicationProject.Projects.Alelo.Views.Alelo_Inicio"
+             BackgroundColor="#f8f8f8"
+             Title="Início">
+
+    <ContentPage.Content>
+
+        <ScrollView>
+
+            <Grid BackgroundColor="Yellow">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25*"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="35*"/>
+                </Grid.RowDefinitions>
+
+                <StackLayout Grid.Row="0" BackgroundColor="Red">
+                    <Frame Margin="30,5,30,0" Padding="0" BackgroundColor="Transparent" CornerRadius="15" >
+                        <AbsoluteLayout>
+                        <Image Source="icon_cartao.png" HeightRequest="180" Aspect="Fill"/>
+                            <Label Text="R$ 350,00" FontSize="Title" FontAttributes="Bold" AbsoluteLayout.LayoutBounds="0.60,3.5,150,150" AbsoluteLayout.LayoutFlags="XProportional,YProportional" TextColor="#017c57" />
+                            <Label Text="gaste até R$ 20,00 hoje" FontSize="11" AbsoluteLayout.LayoutBounds="0.55,4.5,150,150" AbsoluteLayout.LayoutFlags="XProportional,YProportional" TextColor="#017c57" />
+                        </AbsoluteLayout>
+                    </Frame>
+                    <Label Text="22/06 às 18:00h" FontSize="Small" HorizontalOptions="End" Margin="0,0,40,0" TextColor="#d5d5d5" />
+                </StackLayout>
+                
+                <Grid Grid.Row="1" BackgroundColor="Blue" VerticalOptions="Center" Padding="0,10,0,10" Margin="0,20,0,10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50*" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="50*" />
+                    </Grid.ColumnDefinitions>
+
+                    <StackLayout Grid.Column="0" BackgroundColor="Transparent" >
+                        <Image Source="onde_aceita.png" HorizontalOptions="Center" />
+                        <Label Text="Onde aceita" HorizontalOptions="Center" />
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding  OndeAceitaCommand}"/>
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+
+                    <BoxView Grid.Column="1" BackgroundColor="#e9e9e9" WidthRequest="1" />
+
+                    <StackLayout Grid.Column="2" BackgroundColor="Transparent">
+                        <Image Source="extrato.png" HorizontalOptions="Center" />
+                        <Label Text="Extrato" HorizontalOptions="Center" />
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding  ExtratoCommand}"/>
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+                </Grid>
+
+                <StackLayout Grid.Row="2" BackgroundColor="Gray" Margin="10,0,10,5" Padding="0">
+
+                    <Label Text="Mais Alelo" FontSize="Title" FontAttributes="Bold" TextColor="Black" />
+
+                    <Grid VerticalOptions="FillAndExpand" Padding="5,10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="50*" />
+                            <ColumnDefinition Width="50*" />
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="25*" />
+                            <RowDefinition Height="25*" />
+                        </Grid.RowDefinitions>
+
+                        <Frame Padding="0" Grid.Column="0" Grid.Row="0" BackgroundColor="#bdd752" CornerRadius="5" Margin="0,0,5,17">
+                            <StackLayout Padding="0" Margin="0">
+                                <Image Source="vantagem.png" HorizontalOptions="End" Margin="0,7,10,0" HeightRequest="40" WidthRequest="50" />
+                                <Label Text="Descontos e Vantagens" Margin="10,0,30,5"  TextColor="#0e4b13" FontAttributes="Bold" Padding="0" />
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding DescontosVantagensCommand}" />
+                                </StackLayout.GestureRecognizers>
+                            </StackLayout>
+                        </Frame>
+                        
+                        <Frame Padding="0" Grid.Column="1" Grid.Row="0" BackgroundColor="#007f61" CornerRadius="5" Margin="5,0,0,17">
+                            <StackLayout Padding="0">
+                                <Image Source="addCartao.png" HorizontalOptions="End" Margin="0,7,10,0" HeightRequest="40" WidthRequest="50" />
+                                <Label Text="Adicionar cartão" Margin="10,0,70,5" TextColor="White" FontAttributes="Bold" Padding="0" />
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding AdicionarCartaoCommand}" />
+                                </StackLayout.GestureRecognizers>
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame Padding="0" Grid.Column="0" Grid.Row="1" BackgroundColor="#e77e4f" CornerRadius="5" Margin="0,0,5,17">
+                            <StackLayout Padding="0">
+                                <Image Source="ajuda.png" HorizontalOptions="End" Margin="0,7,10,0" HeightRequest="40" WidthRequest="50" />
+                                <Label Text="Precisa de ajuda?" Margin="10,0,70,5" TextColor="White" FontAttributes="Bold" Padding="0" />
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding AjudaCommand}" />
+                                </StackLayout.GestureRecognizers>
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame Padding="0" Grid.Column="1" Grid.Row="1" BackgroundColor="#229ee6" CornerRadius="5" Margin="5,0,0,17">
+                            <StackLayout Padding="0">
+                                <Image Source="delivery.png" HorizontalOptions="End" Margin="0,7,10,0" HeightRequest="40" WidthRequest="50" />
+                                <Label Text="Pague delivery com Alelo" Margin="10,0,30,5" TextColor="White" FontAttributes="Bold" Padding="0" />
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding DeliveryCommand}" />
+                                </StackLayout.GestureRecognizers>
+                            </StackLayout>
+                        </Frame>
+
+                    </Grid>
+
+                </StackLayout>
+
+            </Grid>
+
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>

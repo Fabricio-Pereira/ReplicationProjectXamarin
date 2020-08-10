@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<naxam:BottomTabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ReplicationProject.Projects.Alelo.Views.Alelo"
+             xmlns:naxam="clr-namespace:Naxam.Controls.Forms;assembly=Naxam.BottomTabbedPage.Forms"
+             xmlns:page="clr-namespace:ReplicationProject.Projects.Alelo.Views">
+
+    <NavigationPage.TitleView>
+        <Label x:Name="AletoTitulo" HorizontalTextAlignment="Center" FontSize="Subtitle" TextColor="#16765f" />
+    </NavigationPage.TitleView>
+
+    <page:Alelo_Inicio IconImageSource="ic_home.png" />
+    <page:Alelo_Clube IconImageSource="clube.png" />
+    <page:Alelo_Mensagens IconImageSource="mensagem.png" />
+    <page:Alelo_Opcao IconImageSource="opcao.png" />
+
+</naxam:BottomTabbedPage>

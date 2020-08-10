@@ -1,0 +1,67 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Fonts\FontAwesomeBrands.ttf" />
+    <None Remove="Fonts\FontAwesomeRegular.ttf" />
+    <None Remove="Fonts\FontAwesomeSolid.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Fonts\FontAwesomeBrands.ttf" />
+    <EmbeddedResource Include="Fonts\FontAwesomeRegular.ttf" />
+    <EmbeddedResource Include="Fonts\FontAwesomeSolid.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Naxam.BottomTabbedPage" Version="0.3.0.2" />
+    <PackageReference Include="Xam.Plugin.Iconize" Version="3.5.0.129" />
+    <PackageReference Include="Xam.Plugin.Iconize.FontAwesome" Version="3.5.0.129" />
+    <PackageReference Include="Xamarin.Forms" Version="4.6.0.726" />  
+    <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />  
+    <PackageReference Include="Xamarin.Forms.PancakeView" Version="1.4.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Projects\Alelo\Services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Projects\Alelo\Views\Alelo_Mensagens.xaml.cs">
+      <DependentUpon>Alelo_Mensagens.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Projects\Alelo\Views\Alelo_Opcao.xaml.cs">
+      <DependentUpon>Alelo_Opcao.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Projects\Alelo\Views\Alelo.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Projects\Alelo\Views\Alelo_Clube.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Projects\Alelo\Views\Alelo_Inicio.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Projects\Alelo\Views\Alelo_Mensagens.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Projects\Alelo\Views\Alelo_Opcao.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\MenuProject.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
